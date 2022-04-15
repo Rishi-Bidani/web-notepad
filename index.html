@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notepad</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
+
+    <!-- JS -->
     <script src="./js/index.js" type="module"></script>
 </head>
 
@@ -17,6 +21,22 @@
         <article class="grid-text_area" contenteditable="true"></article>
         <article class="grid-text_area" contenteditable="true"></article>
     </main>
+
+    <dialog class="modal--settings">
+        <header>Settings</header>
+        <section>
+            <label for="tab-size">Tab Size</label>
+            <input type="number" id="tab-size" min="0" max="8">
+
+            <label for="theme-preferece">Dark Mode: </label>
+            <!-- Toggle -->
+            <input type="checkbox" id="theme-preferece">
+        </section>
+        <footer>
+            <button class="btn-modal" id="btn-save">Save</button>
+            <button class="btn-modal" id="btn-cancel">Cancel</button>
+        </footer>
+    </dialog>
 </body>
 
 </html>

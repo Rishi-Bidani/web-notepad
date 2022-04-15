@@ -1,6 +1,7 @@
 import { saveToLocalStorage } from "./storageOperations.js";
+import { openModal } from "./modal.js"
 
-const tabSpace = 4;
+const tabSpace = localStorage.getItem("tabSpace") || 4;
 
 /**
  * [Keydown event: ESCAPE]
@@ -21,7 +22,7 @@ export default function keyBinds(event) {
         const doc = editor.ownerDocument.defaultView;
         const sel = doc.getSelection();
         const range = sel.getRangeAt(0);
-        const tabNode = document.createTextNode(Array(tabSpace + 1).join("\u00a0"));
+        const tabNode = document.createTextNode(Array(Number(tabSpace) + 1).join("\u00a0"));
         range.insertNode(tabNode);
         range.setStartAfter(tabNode);
         range.setEndAfter(tabNode);
@@ -62,6 +63,12 @@ export default function keyBinds(event) {
         const currentNote = event.target;
         const previousNote = currentNote.previousElementSibling;
         if (previousNote) previousNote.focus();
+    }
+
+    // Alt + s opens the settings modal
+    if (event.altKey && event.key === "s") {
+        event.preventDefault();
+        openModal()
     }
 
 }

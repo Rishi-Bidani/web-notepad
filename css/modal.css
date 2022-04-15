@@ -1,0 +1,33 @@
+dialog {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    margin: auto;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    min-width: min(20rem, 80vw);
+}
+
+dialog header {
+    text-align: center;
+    font-size: 2rem;
+    padding-block: 0 2rem;
+}
+
+dialog section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+dialog footer {
+    margin-block: 2rem 0;
+}
+
+.btn-modal {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}

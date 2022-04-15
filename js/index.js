@@ -25,6 +25,8 @@ import { displaySavedTexts } from "./storageOperations.js";
 
 if (storageAvailable('localStorage')) {
     displaySavedTexts();
+    document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+    document.body.classList.add("light-mode");
     document.addEventListener("keydown", keyBinds)
 }
 else {
