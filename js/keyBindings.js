@@ -29,11 +29,6 @@ export default function keyBinds(event) {
         sel.addRange(range);
     }
 
-    // if (event.altKey && event.key === "s") {
-    //     event.preventDefault()
-
-    // }
-
     // Ctrl + S
     if (event.ctrlKey && event.key === "s") {
         event.preventDefault();
@@ -45,4 +40,28 @@ export default function keyBinds(event) {
             alert(error)
         }
     }
+
+    // Ctrl + Alt + r => clear all notes
+    if (event.ctrlKey && event.altKey && event.key === "c") {
+        event.preventDefault();
+        [...document.querySelectorAll(".grid-text_area")].map(target => target.innerHTML = "")
+        alert("Changes haven't been saved, if this was a mistake just refresh. Otherwise make sure to Ctrl + S to save your changes.")
+    }
+
+    //  Shift + right arrow => move to next note
+    if (event.shiftKey && event.key === "ArrowRight") {
+        event.preventDefault();
+        const currentNote = event.target;
+        const nextNote = currentNote.nextElementSibling;
+        if (nextNote) nextNote.focus();
+    }
+
+    // Shift + left arrow => move to previous note
+    if (event.shiftKey && event.key === "ArrowLeft") {
+        event.preventDefault();
+        const currentNote = event.target;
+        const previousNote = currentNote.previousElementSibling;
+        if (previousNote) previousNote.focus();
+    }
+
 }

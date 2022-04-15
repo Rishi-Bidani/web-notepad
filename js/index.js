@@ -9,6 +9,18 @@ import { displaySavedTexts } from "./storageOperations.js";
  * 
  * [Keydown event: Tab]
  * Pressing tab will insert a tabspace
+ * 
+ * [Keydown event: Ctrl + S]
+ * Pressing Ctrl + S will save the notes to local storage
+ * 
+ * [Keydown event: Ctrl + Alt + c]
+ * Pressing Ctrl + Alt + r will clear all notes
+ * 
+ * [Keydown event: Shift + ArrowRight]
+ * Pressing Shift + ArrowRight will move to next note
+ * 
+ * [Keydown event: Shift + ArrowLeft]
+ * Pressing Shift + ArrowLeft will move to previous note
  */
 
 if (storageAvailable('localStorage')) {
