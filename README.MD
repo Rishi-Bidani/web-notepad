@@ -19,3 +19,4 @@ but all your notes are "yours" without being sent to some server.
 | Ctrl + Alt + c     | This will clear all notes                               |
 | Shift + ArrowRight | Focus next note                                         |
 | Shift + ArrowLeft  | Focus previous note                                     |
+| Alt + s            | Open settings                                           |
