@@ -2,6 +2,12 @@ import keyBinds from "./keyBindings.js";
 import storageAvailable from "./storageAvailable.js";
 import { displaySavedTexts } from "./storageOperations.js";
 
+function userLightMode() {
+    const root = document.documentElement;
+    root.style.setProperty("--bg-color", "#f7f7f7");
+    root.style.setProperty("--text-color", "#0d1117");
+    root.style.setProperty("--bg-color", "#f7f7f7");
+}
 
 /**
  * [Keydown event: ESCAPE]
@@ -25,8 +31,7 @@ import { displaySavedTexts } from "./storageOperations.js";
 
 if (storageAvailable('localStorage')) {
     displaySavedTexts();
-    document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
-    document.body.classList.add("light-mode");
+    if (localStorage.getItem("theme") === "light") userLightMode()
     document.addEventListener("keydown", keyBinds)
 }
 else {

@@ -2,6 +2,14 @@
     padding: 0;
     margin: 0;
 }
+
+:root {
+    /* Dark mode default */
+    --bg-color: #0d1117;
+    --text-color: #edf7f6;
+    --secondary-color: #41444c;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         /* Dark mode */

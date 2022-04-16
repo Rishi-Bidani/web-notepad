@@ -7,7 +7,8 @@ function openModal() {
     tabSizeInput.value = localStorage.getItem("tabSpace") || 4;
 
     const darkModeInput = document.querySelector("#theme-preferece");
-    const darkModeDetection = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const darkModeDetection = localStorage.getItem("theme") === "dark" && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    console.log(darkModeDetection)
     darkModeInput.checked = darkModeDetection;
 
     modalSave.addEventListener("click", () => {
