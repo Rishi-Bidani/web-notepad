@@ -1,5 +1,7 @@
 # web-notepad
 
+Visit the website here [https://rishi-bidani.github.io/web-notepad/](https://rishi-bidani.github.io/web-notepad/)
+
 This is just a local storage based notepad for your browser.
 I spend a lot of time in my browser and having a place to quickly jot down notes
 is convenient, without having to login into 100 places.
