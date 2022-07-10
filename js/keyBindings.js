@@ -50,7 +50,7 @@ export default function keyBinds(event) {
     }
 
     //  Shift + right arrow => move to next note
-    if (event.shiftKey && event.key === "ArrowRight") {
+    if (event.altKey && event.key === "ArrowRight") {
         event.preventDefault();
         const currentNote = event.target;
         const nextNote = currentNote.nextElementSibling;
@@ -58,7 +58,7 @@ export default function keyBinds(event) {
     }
 
     // Shift + left arrow => move to previous note
-    if (event.shiftKey && event.key === "ArrowLeft") {
+    if (event.altKey && event.key === "ArrowLeft") {
         event.preventDefault();
         const currentNote = event.target;
         const previousNote = currentNote.previousElementSibling;

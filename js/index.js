@@ -23,8 +23,8 @@ function userLightMode() {
     Tab: Insert a tabspace (number of spaces can be altered from settings)
     Ctrl + s: Save to local storage
     Ctrl + Alt + c: Clear all notes
-    Shift + right arrow: Move to next note
-    Shift + left arrow: Move to previous note
+    Alt + right arrow: Move to next note
+    Alt + left arrow: Move to previous note
     Alt + s: Settings
     `
 
